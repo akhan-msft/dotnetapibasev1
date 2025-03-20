@@ -1,0 +1,108 @@
+@webapi_HostAddress = http://localhost:5012
+
+GET {{webapi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{webapi_HostAddress}}/api/customer
+Accept: application/json
+
+###
+
+GET {{webapi_HostAddress}}/api/customer/2
+Accept: application/json
+
+###
+
+POST {{webapi_HostAddress}}/api/customer
+Content-Type: application/json
+
+{
+    "name": "Ad Doe",
+    "address": "21 Elm St",
+    "city": "Prosper",
+    "state": "Texas",
+    "postalCode": "75068"
+}
+
+###
+
+POST {{webapi_HostAddress}}/api/customer
+Content-Type: application/json
+
+{
+    "name": "Alice Smith",
+    "address": "456 Elm St, Springfield, USA",
+    "city": "Little Elm",
+    "state": "Texas",
+    "postalCode": "75068"
+}
+
+###
+
+POST {{webapi_HostAddress}}/api/customer
+Content-Type: application/json
+
+{
+    "name": "Bob Johnson",
+    "email": "bob@example.com",
+    "phone": "555-123-4567",
+    "address": "789 Oak St, Springfield, USA"
+}
+
+###
+
+GET {{webapi_HostAddress}}/api/order
+Accept: application/json
+
+###
+
+GET {{webapi_HostAddress}}/api/order/1
+Accept: application/json
+
+###
+
+POST {{webapi_HostAddress}}/api/order
+Content-Type: application/json
+
+{
+    "customerId": 1,
+    "amount": 250.00,
+    "orderDetails": "Online order"
+}
+
+###
+
+POST {{webapi_HostAddress}}/api/order
+Content-Type: application/json
+
+{
+    "orderDate": "2025-03-05",
+    "customerId": 2,
+    "totalAmount": 150.50,
+    "status": "Shipped",
+    "shippingAddress": "456 Elm St, Springfield, USA"
+}
+
+###
+
+POST {{webapi_HostAddress}}/api/order
+Content-Type: application/json
+
+{
+    "orderDate": "2025-03-10",
+    "customerId": 3,
+    "totalAmount": 300.75,
+    "status": "Delivered",
+    "shippingAddress": "789 Oak St, Springfield, USA"
+}
+
+###
+
+//write a test case for the get customers by postal code
+GET {{webapi_HostAddress}}/api/customer/postalcode?postalcode=55311
+Accept: application/json
+###
+
+

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Management</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        form input {
+            margin-right: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Customer Management</h1>
+
+<form id="customerForm">
+    <input type="text" id="name" placeholder="Enter customer name" required>
+    <input type="text" id="address" placeholder="Enter address" required>
+    <input type="text" id="city" placeholder="Enter city" required>
+    <input type="text" id="state" placeholder="Enter state" required>
+    <input type="text" id="postalCode" placeholder="Enter postal code" required>
+    <button type="submit">Create Customer</button>
+</form>
+
+<h2>Existing Customers</h2>
+<table id="customersTable">
+    <thead>
+        <tr>
+            <th>Customer ID</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Postal Code</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Customer rows will be appended here -->
+    </tbody>
+</table>
+
+<script>
+    $(document).ready(function() {
+        function fetchCustomers() {
+            $.get('/api/customer', function(data) {
+                $('#customersTable tbody').empty();
+                data.forEach(function(customer) {
+                    $('#customersTable tbody').append(
+                        '<tr>' +
+                        '<td>' + customer.customerId + '</td>' +
+                        '<td>' + customer.name + '</td>' +
+                        '<td>' + customer.address + '</td>' +
+                        '<td>' + customer.city + '</td>' +
+                        '<td>' + customer.state + '</td>' +
+                        '<td>' + customer.postalCode + '</td>' +
+                        '</tr>'
+                    );
+                });
+            });
+        }
+
+        $('#customerForm').submit(function(event) {
+            event.preventDefault();
+            var customerData = {
+                name: $('#name').val(),
+                address: $('#address').val(),
+                city: $('#city').val(),
+                state: $('#state').val(),
+                postalCode: $('#postalCode').val()
+            };
+            $.ajax({
+                url: '/api/customer',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(customerData),
+                success: function() {
+                    fetchCustomers();
+                    $('#customerForm')[0].reset();
+                }
+            });
+        });
+
+        fetchCustomers();
+    });
+</script>
+
+</body>
+</html>
