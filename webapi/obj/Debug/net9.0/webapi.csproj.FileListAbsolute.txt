@@ -159,6 +159,7 @@ C:\Users\adnankhan\dev\ghcopilotdemos\dotnetapibasev1\webapi\obj\Debug\net9.0\we
 C:\Users\adnankhan\dev\ghcopilotdemos\dotnetapibasev1\webapi\obj\Debug\net9.0\webapi.csproj.CoreCompileInputs.cache
 C:\Users\adnankhan\dev\ghcopilotdemos\dotnetapibasev1\webapi\obj\Debug\net9.0\webapi.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\adnankhan\dev\ghcopilotdemos\dotnetapibasev1\webapi\obj\Debug\net9.0\webapi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\adnankhan\dev\ghcopilotdemos\dotnetapibasev1\webapi\obj\Debug\net9.0\webapi.sourcelink.json
 C:\Users\adnankhan\dev\ghcopilotdemos\dotnetapibasev1\webapi\obj\Debug\net9.0\scopedcss\bundle\webapi.styles.css
 C:\Users\adnankhan\dev\ghcopilotdemos\dotnetapibasev1\webapi\obj\Debug\net9.0\compressed\hbg34d4uea-mluguo0k1d.gz
 C:\Users\adnankhan\dev\ghcopilotdemos\dotnetapibasev1\webapi\obj\Debug\net9.0\staticwebassets.build.json

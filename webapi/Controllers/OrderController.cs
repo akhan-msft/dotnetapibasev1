@@ -1,31 +1,37 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
 
 [Route("api/[controller]")]
 [ApiController]
 public class OrderController : ControllerBase
 {
-    private readonly AppDbContext _context;
+    private readonly IOrderService _orderService;
 
-    public OrderController(AppDbContext context)
+    public OrderController(IOrderService orderService)
     {
-        _context = context;
+        _orderService = orderService;
     }
 
+    /// <summary>
+    /// Retrieves a list of all orders.
+    /// </summary>
+    /// <returns>
+    /// An <see cref="IActionResult"/> containing a list of orders wrapped in an HTTP 200 OK response.
+    /// </returns>
+    /// <remarks>
+    /// This method asynchronously fetches all orders using the order service.
+    /// </remarks>
     [HttpGet]
     public async Task<IActionResult> GetOrders()
     {
-        var orders = await _context.Orders.Include(o => o.Customer).ToListAsync();
+        var orders = await _orderService.GetAllOrdersAsync();
         return Ok(orders);
     }
 
     [HttpGet("{id}")]
     public async Task<IActionResult> GetOrder(int id)
     {
-        var order = await _context.Orders
-            .Include(o => o.Customer)
-            .FirstOrDefaultAsync(o => o.OrderId == id);
+        var order = await _orderService.GetOrderByIdAsync(id);
 
         if (order == null)
             return NotFound();
@@ -36,8 +42,7 @@ public class OrderController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> CreateOrder([FromBody] Order order)
     {
-        _context.Orders.Add(order);
-        await _context.SaveChangesAsync();
-        return CreatedAtAction(nameof(GetOrders), new { id = order.OrderId }, order);
+        var createdOrder = await _orderService.CreateOrderAsync(order);
+        return CreatedAtAction(nameof(GetOrder), new { id = createdOrder.OrderId }, createdOrder);
     }
 }

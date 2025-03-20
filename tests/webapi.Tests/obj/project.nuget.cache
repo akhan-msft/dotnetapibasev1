@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "vsP+v26M2v4=",
+  "dgSpecHash": "kOHzcVzS5CU=",
   "success": true,
   "projectFilePath": "C:\\Users\\adnankhan\\dev\\ghcopilotdemos\\dotnetapibasev1\\tests\\webapi.Tests\\webapi.Tests.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\adnankhan\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\adnankhan\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\adnankhan\\.nuget\\packages\\coverlet.collector\\6.0.2\\coverlet.collector.6.0.2.nupkg.sha512",
+    "C:\\Users\\adnankhan\\.nuget\\packages\\fluentassertions\\8.2.0\\fluentassertions.8.2.0.nupkg.sha512",
     "C:\\Users\\adnankhan\\.nuget\\packages\\microsoft.aspnetcore.mvc.testing\\9.0.3\\microsoft.aspnetcore.mvc.testing.9.0.3.nupkg.sha512",
     "C:\\Users\\adnankhan\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.2\\microsoft.aspnetcore.openapi.9.0.2.nupkg.sha512",
     "C:\\Users\\adnankhan\\.nuget\\packages\\microsoft.aspnetcore.testhost\\9.0.3\\microsoft.aspnetcore.testhost.9.0.3.nupkg.sha512",

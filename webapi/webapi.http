@@ -105,4 +105,15 @@ GET {{webapi_HostAddress}}/api/customer/postalcode?postalcode=55311
 Accept: application/json
 ###
 
+### Create a new order for an existing customer
+POST {{webapi_HostAddress}}/api/order
+Content-Type: application/json
+
+{
+    "customerId": 1,
+    "orderDetails": "Purchase of electronics",
+    "orderDate": "2025-03-20T14:30:00",
+    "amount": 499.99
+}
+
 
