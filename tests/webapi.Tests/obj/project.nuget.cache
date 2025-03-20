@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "kOHzcVzS5CU=",
+  "dgSpecHash": "S8TSczhTb7U=",
   "success": true,
   "projectFilePath": "C:\\Users\\adnankhan\\dev\\ghcopilotdemos\\dotnetapibasev1\\tests\\webapi.Tests\\webapi.Tests.csproj",
   "expectedPackageFiles": [
@@ -20,6 +20,7 @@
     "C:\\Users\\adnankhan\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.3\\microsoft.entityframeworkcore.9.0.3.nupkg.sha512",
     "C:\\Users\\adnankhan\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\9.0.3\\microsoft.entityframeworkcore.abstractions.9.0.3.nupkg.sha512",
     "C:\\Users\\adnankhan\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\9.0.3\\microsoft.entityframeworkcore.analyzers.9.0.3.nupkg.sha512",
+    "C:\\Users\\adnankhan\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\9.0.3\\microsoft.entityframeworkcore.inmemory.9.0.3.nupkg.sha512",
     "C:\\Users\\adnankhan\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\9.0.3\\microsoft.entityframeworkcore.relational.9.0.3.nupkg.sha512",
     "C:\\Users\\adnankhan\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\9.0.3\\microsoft.entityframeworkcore.sqlserver.9.0.3.nupkg.sha512",
     "C:\\Users\\adnankhan\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",

@@ -927,3 +927,4 @@ C:\Users\adnankhan\dev\ghcopilotdemos\dotnetapibasev1\tests\webapi.Tests\obj\Deb
 C:\Users\adnankhan\dev\ghcopilotdemos\dotnetapibasev1\tests\webapi.Tests\obj\Debug\net9.0\webapi.Tests.pdb
 C:\Users\adnankhan\dev\ghcopilotdemos\dotnetapibasev1\tests\webapi.Tests\obj\Debug\net9.0\webapi.Tests.genruntimeconfig.cache
 C:\Users\adnankhan\dev\ghcopilotdemos\dotnetapibasev1\tests\webapi.Tests\obj\Debug\net9.0\ref\webapi.Tests.dll
+C:\Users\adnankhan\dev\ghcopilotdemos\dotnetapibasev1\tests\webapi.Tests\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.InMemory.dll
